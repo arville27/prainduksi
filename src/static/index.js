@@ -1,23 +1,21 @@
-$('.kelas').click((e) => {
-    console.log('Hello');
+$('.kelas').click(() => {
     $('.c-1').css({ display: 'none' });
     $('.c-2').css({ display: 'flex' });
     $('.c-3').css({ display: 'none' });
     $('.nav').css({ display: 'flex' });
 });
 
-$('.back-btn').click((e) => {
+$('.back-btn').click(() => {
     $('.c-1').css({ display: 'flex' });
     $('.c-2').css({ display: 'none' });
     $('.c-3').css({ display: 'none' });
     $('.nav').css({ display: 'none' });
 });
 
-$(document).on('submit', '#password-form', function () {
+$(document).on('submit', '#password-form', () => {
     let jawab = document.getElementById('key').value.toUpperCase();
     let key = 'SIREN';
     if (jawab === key) {
-        console.log('YESS');
         congrats();
     } else {
         $('#msg').html('Oops, wrong password!').css('color', 'red');
