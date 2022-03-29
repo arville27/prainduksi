@@ -1,0 +1,26 @@
+{
+  "name": "prainduksi-site",
+  "version": "0.1.0",
+  "description": "Website for Prainduksi PPTI10",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michellepaulinn/prainduksi.git"
+  },
+  "keywords": [],
+  "author": "Michelle, Arville",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michellepaulinn/prainduksi/issues"
+  },
+  "homepage": "https://github.com/michellepaulinn/prainduksi#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
