@@ -12,10 +12,18 @@ $('.back-btn').click(() => {
     $('.nav').css({ display: 'none' });
 });
 
-$(document).on('submit', '#password-form', () => {
+$(document).on('submit', '#password-form', async (e) => {
+    e.preventDefault();
     let jawab = document.getElementById('key').value.toUpperCase();
-    let key = 'SIREN';
-    if (jawab === key) {
+    const option = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ auth: jawab }),
+    };
+    const res = await fetch('/api/auth', option);
+    if (res.status === 200) {
         congrats();
     } else {
         $('#msg').html('Oops, wrong password!').css('color', 'red');
