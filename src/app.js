@@ -7,4 +7,5 @@ app.use(express.json());
 app.use(express.static('src/static'));
 app.use('/api/auth', require('./routes/auth'));
 
-app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
+const port = PORT ?? 3500;
+app.listen(port, () => console.log(`Server listening on port ${port}`));
