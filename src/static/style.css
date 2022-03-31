@@ -38,7 +38,6 @@
     justify-content: center;
 }
 
-
 .auspicious {
     transition: 0.5s ease-in-out;
 }
@@ -71,7 +70,6 @@
     transition: 0.25s ease-in-out;
 }
 
-
 .kelas > img {
     width: 100%;
     height: auto;
@@ -79,7 +77,7 @@
     margin-bottom: 1rem;
 }
 
-.overlay{
+.overlay {
     display: flex;
     position: absolute;
     justify-content: center;
@@ -95,11 +93,11 @@
     opacity: 0;
 }
 
-.kelas:hover .overlay{
+.kelas:hover .overlay {
     opacity: 1;
 }
 
-.kelas > img:hover{
+.kelas > img:hover {
     cursor: pointer;
 }
 
