@@ -37,6 +37,17 @@
     justify-content: center;
 }
 
+
+.auspicious {
+    transition: 0.5s ease-in-out;
+}
+
+.auspicious:hover {
+    transform: scale(1.1);
+    content: '';
+    filter: brightness(0.9);
+}
+
 .auspicious > img {
     width: 15vw;
     border-radius: 50%;
@@ -56,6 +67,7 @@
     border-radius: 10px;
     background: rgba(0, 0, 0, 0.5);
     font-weight: 500;
+    transition: 0.25s ease-in-out;
 }
 
 
@@ -88,6 +100,11 @@
 
 .kelas > img:hover{
     cursor: pointer;
+}
+
+.kelas:hover {
+    transform: scale(1.1);
+    margin-inline: 1rem;
 }
 
 .c-1 {
