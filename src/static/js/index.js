@@ -1,4 +1,4 @@
-$('.kelas').click(() => {
+$('img').click(() => {
     $('.c-1').css({ display: 'none' });
     $('.c-2').css({ display: 'flex' });
     $('.c-3').css({ display: 'none' });

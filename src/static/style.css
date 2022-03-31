@@ -3,6 +3,8 @@
     margin: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana,
         sans-serif;
+        
+    box-sizing: border-box;
 }
 
 .bg-vid {
@@ -48,15 +50,41 @@
 }
 
 .kelas {
+    position: relative;
     width: 15vw;
     padding: 1rem;
     border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
 }
 
+
 .kelas > img {
-    width: 10vw;
+    width: 100%;
+    height: auto;
     border-radius: 50%;
     margin-bottom: 1rem;
+}
+
+.overlay{
+    display: none;
+    position: absolute;
+    inset: 0;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.kelas:hover .overlay{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.8);
+    color: gold;
+    transition: .5s ease;
+}
+
+.kelas > img:hover{
+    cursor: pointer;
 }
 
 .c-1 {
