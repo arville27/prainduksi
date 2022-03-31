@@ -5,6 +5,7 @@
     margin: 0;
     font-family: 'Open Sans', sans-serif;
     box-sizing: border-box;
+    user-select: none;
 }
 
 .bg-vid {
@@ -49,7 +50,7 @@
 }
 
 .auspicious > img {
-    width: 1vw;
+    width: 13vw;
     border-radius: 50%;
 }
 
