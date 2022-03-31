@@ -140,3 +140,34 @@
 .invitation {
     width: 60%;
 }
+
+.sosmed-container {
+    width: 100%;
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    opacity: 0.7;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+}
+
+.sosmed-icon {
+    width: 35px;
+    transition: 0.25s ease-in-out;
+}
+
+.sosmed-icon:hover {
+    transform: scale(1.2);
+    margin-inline: 4px;
+}
+
+.icon-container:first-child img {
+    width: 30px;
+}
