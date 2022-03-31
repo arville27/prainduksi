@@ -1,9 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
 * {
     padding: 0;
     margin: 0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana,
-        sans-serif;
-        
+    font-family: 'Open Sans', sans-serif;
     box-sizing: border-box;
 }
 
@@ -55,6 +55,7 @@
     padding: 1rem;
     border-radius: 10px;
     background: rgba(0, 0, 0, 0.5);
+    font-weight: 500;
 }
 
 
@@ -71,10 +72,12 @@
     justify-content: center;
     align-items: center;
     inset: 0;
-    font-size: 20px;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
     background: rgba(0, 0, 0, 0.8);
     border-radius: 30px;
     color: gold;
+    font-weight: 600;
     transition: 0.5s ease-in-out;
     opacity: 0;
 }
