@@ -44,7 +44,7 @@ $(document).on('submit', '#password-form', async (e) => {
     };
     const res = await fetch('/api/auth', option);
     if (res.status === 200) {
-        congrats();
+        console.log('SUCCESS');
     } else {
         $('#msg').html('Oops, wrong password!').css('color', 'red');
     }
