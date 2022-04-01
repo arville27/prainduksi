@@ -1,20 +1,22 @@
 import { generateCardLogo, data } from './utils.js';
 
+// Demi input box yang cantik ;-;
+$(".form-container > input[type='password']").on('focus', () => {
+    $('.form-container').css({
+        'border-color': 'gold',
+        'box-shadow': '0 0 10px gold',
+    });
+});
+
+$(".form-container > input[type='password']").on('focusout', () => {
+    $('.form-container').css({
+        'border-color': 'black',
+        'box-shadow': 'none',
+    });
+});
+
+// Generate card kelas
 $('.kelas-container').append(data['classes'].map((data) => generateCardLogo(data)));
-
-$('.logo-kelas').click(() => {
-    $('.c-1').css({ display: 'none' });
-    $('.c-2').css({ display: 'flex' });
-    $('.c-3').css({ display: 'none' });
-    $('.nav').css({ display: 'flex' });
-});
-
-$('.back-btn').click(() => {
-    $('.c-1').css({ display: 'flex' });
-    $('.c-2').css({ display: 'none' });
-    $('.c-3').css({ display: 'none' });
-    $('.nav').css({ display: 'none' });
-});
 
 $(document).on('submit', '#password-form', async (e) => {
     e.preventDefault();
@@ -34,10 +36,3 @@ $(document).on('submit', '#password-form', async (e) => {
     }
     return false;
 });
-
-function congrats() {
-    $('.c-1').css({ display: 'none' });
-    $('.c-2').css({ display: 'none' });
-    $('.c-3').css({ display: 'flex' });
-    $('.nav').css({ display: 'flex' });
-}
