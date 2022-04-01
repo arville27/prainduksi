@@ -32,6 +32,16 @@ $('.logo-kelas').on('click', (e) => {
     });
 });
 
+// Back button from video page
+$('.back-btn').on('click', (e) => {
+    $('.c-3').css({
+        display: 'none',
+    });
+    $('.c-1 , .sosmed-container').css({
+        display: 'flex',
+    });
+});
+
 $(document).on('submit', '#password-form', async (e) => {
     e.preventDefault();
     let jawab = document.getElementById('key').value.toUpperCase();
@@ -45,6 +55,14 @@ $(document).on('submit', '#password-form', async (e) => {
     const res = await fetch('/api/auth', option);
     if (res.status === 200) {
         console.log('SUCCESS');
+        $('.content').toggleClass('blur');
+        $('.popup-container').fadeOut(250);
+        $('.c-3').css({
+            display: 'flex',
+        });
+        $('.c-1 , .sosmed-container').css({
+            display: 'none',
+        });
     } else {
         $('#msg').html('Oops, wrong password!').css('color', 'red');
     }
