@@ -1,0 +1,29 @@
+{
+    "classes": [
+        {
+            "logo": "Assets/bp1.jpg",
+            "name": "PPBP 1",
+            "active": true
+        },
+        {
+            "logo": "Assets/bp2.jpg",
+            "name": "PPBP 2",
+            "active": false
+        },
+        {
+            "logo": "Assets/ti11.jpg",
+            "name": "PPTI 11",
+            "active": false
+        },
+        {
+            "logo": "Assets/ti12.jpg",
+            "name": "PPTI 12",
+            "active": false
+        },
+        {
+            "logo": "Assets/ti13.jpg",
+            "name": "PPTI 13",
+            "active": false
+        }
+    ]
+}

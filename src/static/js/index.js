@@ -1,3 +1,7 @@
+import { generateCardLogo, data } from './utils.js';
+
+$('.kelas-container').append(data['classes'].map((data) => generateCardLogo(data)));
+
 $('.logo-kelas').click(() => {
     $('.c-1').css({ display: 'none' });
     $('.c-2').css({ display: 'flex' });
