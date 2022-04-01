@@ -125,6 +125,63 @@
     gap: 1rem;
 }
 
+.vid-con video {
+    border-radius: 20px;
+    border: solid 4px rgba(255, 255, 255, 0.2);
+}
+
+.button-container {
+    display: flex;
+    margin-inline: auto;
+    width: fit-content;
+    gap: 10%;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.download-inv,
+.copy-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: 3% 10%;
+    border-radius: 5px;
+    border: 2px solid rgb(223, 189, 0);
+    transition: 0.25s;
+}
+
+.download-inv {
+    background-color: rgb(223, 189, 0);
+    color: black;
+}
+
+.download-inv:hover,
+.copy-link:hover {
+    transform: scale(1.03);
+    filter: brightness(0.9);
+}
+
+.back-btn {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    color: gold;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.back-btn > span {
+    font-size: 2rem;
+    transition: 0.25s;
+}
+
+.back-btn:hover > span {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+}
+
 #password-form {
     display: flex;
     flex-direction: column;
@@ -146,6 +203,7 @@
     align-items: center;
     inset: 0;
     transition: 0.75s ease-in-out;
+    display: none;
 }
 
 .popup-card {
