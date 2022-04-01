@@ -1,20 +1,5 @@
 import { generateCardLogo, data, generatePopupCard } from './utils.js';
 
-// Demi input box yang cantik ;-;
-$(".form-container > input[type='password']").on('focus', () => {
-    $('.form-container').css({
-        'border-color': 'gold',
-        'box-shadow': '0 0 10px gold',
-    });
-});
-
-$(".form-container > input[type='password']").on('focusout', () => {
-    $('.form-container').css({
-        'border-color': 'black',
-        'box-shadow': 'none',
-    });
-});
-
 // Generate card kelas
 $('.kelas-container').append(data['classes'].map((data) => generateCardLogo(data)));
 
@@ -29,6 +14,20 @@ $('.logo-kelas').on('click', (e) => {
     $('#close-popup').on('click', () => {
         content.toggleClass('blur');
         container.fadeOut(250);
+    });
+    // Demi input box yang cantik ;-;
+    $("input[type='password']").on('focus', () => {
+        $('.form-container').css({
+            'border-color': 'gold',
+            'box-shadow': '0 0 10px gold',
+        });
+    });
+
+    $(".form-container > input[type='password']").on('focusout', () => {
+        $('.form-container').css({
+            'border-color': 'black',
+            'box-shadow': 'none',
+        });
     });
 });
 
