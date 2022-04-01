@@ -140,12 +140,11 @@
 }
 
 .popup-container {
-    display: flex;
     position: fixed;
     justify-content: center;
     align-items: center;
     inset: 0;
-    transition: 0.75s ease-in-out;
+    display: none;
 }
 
 .popup-card {
