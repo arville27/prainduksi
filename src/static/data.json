@@ -1,26 +1,35 @@
 {
+    "ti10": {
+        "logo": "Assets/auspicious.jpg",
+        "name": "PPTI 10"
+    },
     "classes": [
         {
+            "id": "1",
             "logo": "Assets/bp1.jpg",
             "name": "PPBP 1",
             "active": true
         },
         {
+            "id": "2",
             "logo": "Assets/bp2.jpg",
             "name": "PPBP 2",
             "active": false
         },
         {
+            "id": "3",
             "logo": "Assets/ti11.jpg",
             "name": "PPTI 11",
             "active": false
         },
         {
+            "id": "4",
             "logo": "Assets/ti12.jpg",
             "name": "PPTI 12",
             "active": false
         },
         {
+            "id": "5",
             "logo": "Assets/ti13.jpg",
             "name": "PPTI 13",
             "active": false
