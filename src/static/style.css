@@ -141,6 +141,51 @@
     width: 60%;
 }
 
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 400px;
+    gap: 10px;
+}
+
+input {
+    display: block;
+}
+
+input[type='text'] {
+    width: 50%;
+}
+
+input[type='text'] {
+    border-radius: 5px;
+    padding-block: 0.3em;
+    padding-left: 1em;
+    text-align: left;
+}
+
+input[type='text']:focus {
+    outline: none;
+    border-color: gold;
+    box-shadow: 0 0 10px gold;
+}
+
+input[type='submit'] {
+    background-color: black;
+    width: 30%;
+    height: 80%;
+    color: gold;
+    padding: 0;
+    border: solid 1 px black;
+}
+
+input[type='submit']:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    color: white;
+}
+
 .sosmed-container {
     width: 100%;
     position: absolute;
