@@ -15,6 +15,7 @@
     min-width: 100%;
     min-height: 100%;
     filter: brightness(0.2);
+    z-index: -1;
 }
 
 .content {
@@ -112,18 +113,11 @@
     margin-inline: 1rem;
 }
 
-.c-1 {
-    animation: ease-in-out 1s;
-    animation-duration: 1s;
-}
-
 .c-3 {
-    display: none;
-    animation: ease-in-out 1s;
-    animation-duration: 1s;
     flex-direction: column;
     gap: 1rem;
     z-index: 1;
+    display: none;
 }
 
 .vid-con video {

@@ -1,4 +1,4 @@
-import { generateCardLogo, data, generatePopupCard } from './utils.js';
+import { generateCardLogo, data, generatePopupCard, generateVideoPage } from './utils.js';
 
 // Generate card kelas
 $('.kelas-container').append(data['classes'].map((data) => generateCardLogo(data)));
@@ -31,39 +31,32 @@ $('.logo-kelas').on('click', (e) => {
     });
 });
 
-// Back button from video page
-$('.back-btn').on('click', (e) => {
-    $('.c-3').css({
-        display: 'none',
-    });
-    $('.c-1 , .sosmed-container').css({
-        display: 'flex',
-    });
-});
-
 $(document).on('submit', '#password-form', async (e) => {
     e.preventDefault();
     let jawab = document.getElementById('key').value.toUpperCase();
     const option = {
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ auth: jawab }),
     };
     const res = await fetch('/api/auth', option);
     if (res.status === 200) {
-        console.log('SUCCESS');
+        const container = $('.c-3');
         $('.content').toggleClass('blur');
-        $('.popup-container').fadeOut(250);
-        $('.c-3').css({
-            display: 'flex',
+        await $('.popup-container').fadeOut(350).promise();
+
+        $('.c-1, .sosmed-container').css('display', 'none');
+        container.fadeIn(250).append(generateVideoPage({ video: '../Assets/video/ppbp1.mp4' }));
+
+        // Back button from video page
+        $('.back-btn').on('click', async () => {
+            await container.fadeOut(250).promise();
+            container.empty();
+            $('.c-1 , .sosmed-container').fadeIn(750).css('display', 'flex');
         });
-        $('.c-1 , .sosmed-container').css({
-            display: 'none',
-        });
+
+        $('video.invitation')[0].play();
     } else {
         $('#msg').html('Oops, wrong password!').css('color', 'red');
     }
-    return false;
 });

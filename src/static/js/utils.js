@@ -40,4 +40,17 @@ function generatePopupCard(group1, group2) {
     ]);
 }
 
-export { generateCardLogo, generatePopupCard, data };
+function generateVideoPage({ video, link = '', poster = '' }) {
+    return [
+        $('<div>', { class: 'back-btn' }).append(
+            $('<span>', { class: 'material-icons-round' }).text('arrow_back_ios')
+        ),
+        $('<div>', { class: 'vid-con' }).append($('<video>', { class: 'invitation', src: video })),
+        $('<div>', { class: 'button-container' }).append([
+            $('<p>', { class: 'download-inv' }).text('Download Invitation'),
+            $('<p>', { class: 'copy-link' }).text('Copy Link'),
+        ]),
+    ];
+}
+
+export { generateCardLogo, generatePopupCard, generateVideoPage, data };
