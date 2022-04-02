@@ -10,7 +10,7 @@ $('.logo-kelas').on('click', (e) => {
     const container = $('.popup-container');
     const attended = data['classes'].find((item) => item.id === id);
     content.toggleClass('blur');
-    container.empty().fadeIn(250).css({ display: 'flex' }).append(generatePopupCard(data['ti10'], attended));
+    container.empty().fadeIn(400).css('display', 'flex').append(generatePopupCard(data['ti10'], attended));
     $('#close-popup').on('click', () => {
         content.toggleClass('blur');
         container.fadeOut(250);
