@@ -208,8 +208,19 @@
     background-color: beige;
 }
 
+.title-container {
+    text-align: center;
+}
+
 .popup-title {
     letter-spacing: 1px;
+}
+
+.popup-title > span {
+    margin-inline: 0.7rem;
+    font-size: 1.2rem;
+    color: gold;
+    filter: brightness(0.9);
 }
 
 .logo-container {

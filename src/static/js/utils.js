@@ -16,8 +16,13 @@ function generateCardLogo({ id, logo, name, active = 0 }) {
 
 function generatePopupCard(group1, group2) {
     return $('<div>', { class: 'popup-card' }).append([
-        $('<h3>').text('Prainduksi'),
-        $('<h1>', { class: 'popup-title' }).text('Call of The Sea'),
+        $('<div>', { class: 'title-container' }).append([
+            $('<h3>').text('Prainduksi'),
+            $('<h1>', { class: 'popup-title' })
+                .text('Call of The Sea')
+                .append($('<span>', { class: 'material-icons-round' }).text('sailing'))
+                .prepend($('<span>', { class: 'material-icons-round' }).text('sailing')),
+        ]),
         $('<div>', { class: 'logo-container' }).append([
             $('<div>', { class: 'image-container' }).append([
                 $('<img>', { src: group1.logo }),
