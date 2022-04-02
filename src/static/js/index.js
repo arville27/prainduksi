@@ -10,7 +10,7 @@ $('.logo-kelas').on('click', async () => {
     const active = await (await fetch('/api/event/active')).json();
     content.toggleClass('blur');
     container.empty().fadeIn(400).css('display', 'flex').append(generatePopupCard(data.organizer, active));
-    $('#close-popup').on('click', () => {
+    $('#close-popup').one('click', () => {
         content.toggleClass('blur');
         container.fadeOut(250);
     });
@@ -50,7 +50,7 @@ $(document).on('submit', '#password-form', async (e) => {
         container.fadeIn(250).css('display', 'flex').append(generateVideoPage(active));
 
         // Back button from video page
-        $('.back-btn').on('click', async () => {
+        $('.back-btn').one('click', async () => {
             await container.fadeOut(500).promise();
             container.empty();
             $('.c-1 , .sosmed-container').fadeIn(750).css('display', 'flex');
