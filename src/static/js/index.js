@@ -59,6 +59,9 @@ $(document).on('submit', '#password-form', async (e) => {
             $('.c-1 , .sosmed-container').fadeIn(750).css('display', 'flex');
         });
 
+        // Clipboard copy from video page
+        $('#clip-copy').on('click', () => navigator.clipboard.writeText(attended.link));
+
         $('video.invitation')[0].play();
     } else {
         $('#msg').html('Oops, wrong password!').css('color', 'red');

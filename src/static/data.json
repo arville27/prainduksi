@@ -9,6 +9,7 @@
             "logo": "Assets/bp1.jpg",
             "video": "Assets/video/1.mp4",
             "poster": "Assets/poster/1.png/download",
+            "link": "Link untuk kelas 1",
             "name": "PPBP 1",
             "active": 1
         },
@@ -17,6 +18,7 @@
             "logo": "Assets/bp2.jpg",
             "video": "Assets/video/2.mp4",
             "poster": "Assets/poster/2.png/download",
+            "link": "Link untuk kelas 2",
             "name": "PPBP 2",
             "active": 2
         },
@@ -25,6 +27,7 @@
             "logo": "Assets/ti11.jpg",
             "video": "Assets/video/3.mp4",
             "poster": "Assets/poster/3.png/download",
+            "link": "Link untuk kelas 3",
             "name": "PPTI 11",
             "active": 0
         },
@@ -33,6 +36,7 @@
             "logo": "Assets/ti12.jpg",
             "video": "Assets/video/4.mp4",
             "poster": "Assets/poster/4.png/download",
+            "link": "Link untuk kelas 4",
             "name": "PPTI 12",
             "active": 0
         },
@@ -41,6 +45,7 @@
             "logo": "Assets/ti13.jpg",
             "video": "Assets/video/5.mp4",
             "poster": "Assets/poster/5.png/download",
+            "link": "Link untuk kelas 5",
             "name": "PPTI 13",
             "active": 0
         }
