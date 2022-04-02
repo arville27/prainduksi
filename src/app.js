@@ -18,5 +18,4 @@ app.use(express.static('src/static'));
 
 const port = PORT ?? 3500;
 
-console.log('Printing');
 app.listen(port, () => console.log(`Server listening on port ${port}`));
