@@ -1,12 +1,17 @@
 const response = await fetch('../data.json');
 const data = await response.json();
 
-function generateCardLogo({ id, logo, name, active = false }) {
+// active = 0 === Belum Mulai
+// active = 1 === Mulai
+// active = 2 === Selesai
+function generateCardLogo({ id, logo, name, active = 0 }) {
     const card = $('<div>', { class: 'kelas' }).append([
         $('<img>', { src: logo, class: 'logo-kelas', 'data-id': id }),
         $('<p>').text(name),
     ]);
-    return !active ? card.append($('<div>', { class: 'overlay' }).text('Coming Soon')) : card;
+    if (active === 0) return card.append($('<div>', { class: 'overlay' }).text('Coming Soon'));
+    else if (active === 1) return card;
+    else if (active === 2) return card.append($('<div>', { class: 'overlay' }).text('Finished'));
 }
 
 function generatePopupCard(group1, group2) {
