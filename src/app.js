@@ -1,11 +1,19 @@
 const express = require('express');
-const { PORT } = require('./config');
+const session = require('express-session');
+const { PORT, SESSION_SECRET } = require('./config');
 
 const app = express();
-
+app.use(
+    session({
+        secret: SESSION_SECRET,
+        resave: false,
+        saveUninitialized: false,
+    })
+);
 app.use(express.json());
 app.use(express.static('src/static'));
 app.use('/api/auth', require('./routes/auth'));
+app.use('/api/info', require('./routes/info'));
 
 const port = PORT ?? 3500;
 
