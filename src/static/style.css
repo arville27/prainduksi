@@ -46,24 +46,25 @@
 
 .auspicious {
     z-index: 1;
+}
+
+.auspicious > img {
+    width: 20%;
+    min-width: 200px;
+    border-radius: 50%;
     transition: 0.5s ease-in-out;
 }
 
-.auspicious:hover {
+.auspicious > img:hover {
     transform: scale(1.1);
     content: '';
     filter: brightness(0.9);
 }
 
-.auspicious > img {
-    width: 13vw;
-    border-radius: 50%;
-}
-
 .kelas-container {
     width: 80%;
     display: flex;
-    gap: 2rem;
+    gap: 2vw;
     justify-content: center;
 }
 
@@ -300,8 +301,8 @@ input[type='submit']:hover {
 .sosmed-container {
     width: 100%;
     position: absolute;
-    bottom: 15px;
-    right: 20px;
+    bottom: 2vh;
+    right: 5vh;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -321,7 +322,7 @@ input[type='submit']:hover {
 
 .sosmed-icon:hover {
     transform: scale(1.2);
-    margin-inline: 4px;
+    margin-inline: 0.25rem;
 }
 
 .icon-container:first-child img {
