@@ -11,9 +11,9 @@ app.use(
     })
 );
 app.use(express.json());
-app.use(express.static('src/static'));
 app.use('/api/auth', require('./routes/auth'));
-app.use('/api/info', require('./routes/info'));
+app.use('/Assets', require('./routes/assets'));
+app.use(express.static('src/static'));
 
 const port = PORT ?? 3500;
 

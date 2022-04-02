@@ -33,11 +33,15 @@ $('.logo-kelas').on('click', (e) => {
 
 $(document).on('submit', '#password-form', async (e) => {
     e.preventDefault();
+
     let jawab = document.getElementById('key').value.toUpperCase();
+    const id = $(e.target).attr('data-id');
+    const attended = data['classes'].find((item) => item.id === id);
+
     const option = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ auth: jawab }),
+        body: JSON.stringify({ auth: jawab, id }),
     };
     const res = await fetch('/api/auth', option);
     if (res.status === 200) {
@@ -46,10 +50,7 @@ $(document).on('submit', '#password-form', async (e) => {
         await $('.popup-container').fadeOut(350).promise();
 
         $('.c-1, .sosmed-container').css('display', 'none');
-        container
-            .fadeIn(250)
-            .css('display', 'flex')
-            .append(generateVideoPage({ video: '../Assets/video/ppbp1.mp4' }));
+        container.fadeIn(250).css('display', 'flex').append(generateVideoPage(attended));
 
         // Back button from video page
         $('.back-btn').on('click', async () => {
