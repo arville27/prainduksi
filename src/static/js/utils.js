@@ -1,12 +1,12 @@
-const response = await fetch('../data.json');
+const response = await fetch('/api/event/members');
 const data = await response.json();
 
 // active = 0 === Belum Mulai
 // active = 1 === Mulai
 // active = 2 === Selesai
-function generateCardLogo({ id, logo, name, active = 0 }) {
+function generateCardLogo({ logo, name, active = 0 }) {
     const card = $('<div>', { class: 'kelas' }).append([
-        $('<img>', { src: logo, class: 'logo-kelas', 'data-id': id }),
+        $('<img>', { src: logo, class: 'logo-kelas' }),
         $('<p>').text(name),
     ]);
     if (active === 0) return card.append($('<div>', { class: 'overlay' }).text('Coming Soon'));
@@ -34,7 +34,7 @@ function generatePopupCard(group1, group2) {
                 $('<h3>').text(group2.name),
             ]),
         ]),
-        $('<form>', { action: '', id: 'password-form', 'data-id': group2.id }).append([
+        $('<form>', { action: '', id: 'password-form' }).append([
             $('<div>', { class: 'form-container' }).append([
                 $('<label>', { for: 'key', class: 'material-icons-round' }).text('key'),
                 $('<input>', {

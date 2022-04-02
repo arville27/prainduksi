@@ -1,12 +1,13 @@
 const express = require('express');
 const auth = express.Router();
-const { SECRET } = require('../config');
+const { SECRET, participants } = require('../config');
 
 auth.post('/', (req, res) => {
-    if (req.body?.id && req.body?.auth === SECRET) {
-        req.session.access = req.body.id;
-        res.status(200).send('SUCCESS');
-    } else res.status(401).send('UNAUTHORIZED');
+    if (req.body?.secret === SECRET) {
+        const active = participants.find((group) => group.active === 1);
+        req.session.access = active.id;
+        res.sendStatus(200);
+    } else res.sendStatus(401);
 });
 
 module.exports = auth;
