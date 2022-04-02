@@ -46,7 +46,10 @@ $(document).on('submit', '#password-form', async (e) => {
         await $('.popup-container').fadeOut(350).promise();
 
         $('.c-1, .sosmed-container').css('display', 'none');
-        container.fadeIn(250).append(generateVideoPage({ video: '../Assets/video/ppbp1.mp4' }));
+        container
+            .fadeIn(250)
+            .css('display', 'flex')
+            .append(generateVideoPage({ video: '../Assets/video/ppbp1.mp4' }));
 
         // Back button from video page
         $('.back-btn').on('click', async () => {
