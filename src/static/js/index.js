@@ -46,7 +46,7 @@ $(document).on('submit', '#password-form', async (e) => {
     const res = await fetch('/api/auth', option);
     if (res.status === 200) {
         const container = $('.c-3');
-        $('.content').toggleClass('blur');
+        $('.content, .bg-vid').toggleClass('blur');
         await $('.popup-container').fadeOut(350).promise();
 
         $('.c-1, .sosmed-container').css('display', 'none');
