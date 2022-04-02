@@ -1,16 +1,15 @@
 import { generateCardLogo, data, generatePopupCard, generateVideoPage } from './utils.js';
 
 // Generate card kelas
-$('.kelas-container').append(data['classes'].map((data) => generateCardLogo(data)));
+$('.kelas-container').append(data.participants.map((group) => generateCardLogo(group)));
 
 // Password popup
-$('.logo-kelas').on('click', (e) => {
-    const id = $(e.target).attr('data-id');
+$('.logo-kelas').on('click', async () => {
     const content = $('.content, .bg-vid, .sosmed-container');
     const container = $('.popup-container');
-    const attended = data['classes'].find((item) => item.id === id);
+    const active = await (await fetch('/api/event/active')).json();
     content.toggleClass('blur');
-    container.empty().fadeIn(400).css('display', 'flex').append(generatePopupCard(data['ti10'], attended));
+    container.empty().fadeIn(400).css('display', 'flex').append(generatePopupCard(data.organizer, active));
     $('#close-popup').on('click', () => {
         content.toggleClass('blur');
         container.fadeOut(250);
@@ -34,14 +33,12 @@ $('.logo-kelas').on('click', (e) => {
 $(document).on('submit', '#password-form', async (e) => {
     e.preventDefault();
 
-    let jawab = document.getElementById('key').value.toUpperCase();
-    const id = $(e.target).attr('data-id');
-    const attended = data['classes'].find((item) => item.id === id);
-
+    const answer = document.getElementById('key').value.toUpperCase();
+    const active = await (await fetch('/api/event/active')).json();
     const option = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ auth: jawab, id }),
+        body: JSON.stringify({ secret: answer }),
     };
     const res = await fetch('/api/auth', option);
     if (res.status === 200) {
@@ -50,7 +47,7 @@ $(document).on('submit', '#password-form', async (e) => {
         await $('.popup-container').fadeOut(350).promise();
 
         $('.c-1, .sosmed-container').css('display', 'none');
-        container.fadeIn(250).css('display', 'flex').append(generateVideoPage(attended));
+        container.fadeIn(250).css('display', 'flex').append(generateVideoPage(active));
 
         // Back button from video page
         $('.back-btn').on('click', async () => {
@@ -60,7 +57,7 @@ $(document).on('submit', '#password-form', async (e) => {
         });
 
         // Clipboard copy from video page
-        $('#clip-copy').on('click', () => navigator.clipboard.writeText(attended.link));
+        $('#clip-copy').on('click', () => navigator.clipboard.writeText(active.link));
 
         $('video.invitation')[0].play();
     } else {

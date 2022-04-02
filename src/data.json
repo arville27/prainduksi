@@ -1,9 +1,9 @@
 {
-    "ti10": {
+    "organizer": {
         "logo": "Assets/auspicious.jpg",
         "name": "PPTI 10"
     },
-    "classes": [
+    "participants": [
         {
             "id": "1",
             "logo": "Assets/bp1.jpg",
