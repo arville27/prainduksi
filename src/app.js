@@ -3,6 +3,7 @@ const session = require('express-session');
 const { PORT, SESSION_SECRET } = require('./config');
 
 const app = express();
+app.use(require('./middlerware/logger'));
 app.use(
     session({
         secret: SESSION_SECRET,
