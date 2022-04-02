@@ -20,6 +20,7 @@ a {
     min-height: 100%;
     filter: brightness(0.2);
     z-index: -1;
+    transition: 0.5s ease-in-out;
 }
 
 .content {
@@ -312,6 +313,7 @@ input[type='submit']:hover {
     gap: 1rem;
     opacity: 0.7;
     color: white;
+    transition: 0.2s ease-in-out;
 }
 
 .icon-container {

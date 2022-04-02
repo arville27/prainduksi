@@ -6,7 +6,7 @@ $('.kelas-container').append(data['classes'].map((data) => generateCardLogo(data
 // Password popup
 $('.logo-kelas').on('click', (e) => {
     const id = $(e.target).attr('data-id');
-    const content = $('.content, .bg-vid');
+    const content = $('.content, .bg-vid, .sosmed-container');
     const container = $('.popup-container');
     const attended = data['classes'].find((item) => item.id === id);
     content.toggleClass('blur');
@@ -46,7 +46,7 @@ $(document).on('submit', '#password-form', async (e) => {
     const res = await fetch('/api/auth', option);
     if (res.status === 200) {
         const container = $('.c-3');
-        $('.content, .bg-vid').toggleClass('blur');
+        $('.content, .bg-vid, .sosmed-container').toggleClass('blur');
         await $('.popup-container').fadeOut(350).promise();
 
         $('.c-1, .sosmed-container').css('display', 'none');
@@ -54,7 +54,7 @@ $(document).on('submit', '#password-form', async (e) => {
 
         // Back button from video page
         $('.back-btn').on('click', async () => {
-            await container.fadeOut(250).promise();
+            await container.fadeOut(500).promise();
             container.empty();
             $('.c-1 , .sosmed-container').fadeIn(750).css('display', 'flex');
         });
