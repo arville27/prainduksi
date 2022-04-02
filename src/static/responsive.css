@@ -1,0 +1,47 @@
+@media screen and (max-width: 600px) {
+    .popup-card {
+        width: 80%;
+        font-size: 0.8rem;
+    }
+    .title-container {
+        width: 100%;
+        /* border: solid 1px black; */
+    }
+    .logo-container {
+        width: 100%;
+        /* border: solid 1px black; */
+    }
+    .image-container {
+        width: 90%;
+        /* border: solid 1px red; */
+    }
+    .image-container > img {
+        width: 100%;
+    }
+    .logo-container > .material-icons-round {
+        font-size: 2rem;
+        /* border: solid 1px blue; */
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .popup-card {
+        font-size: 0.5rem;
+    }
+    .logo-container > .material-icons-round {
+        font-size: 1.5rem;
+        /* border: solid 1px blue; */
+    }
+    form {
+        width: 80%;
+    }
+    .form-container {
+        width: 100%;
+    }
+    .form-container > input {
+        font-size: 0.5rem !important;
+    }
+    .form-container > input[type='submit'] {
+        width: 80%;
+    }
+}
