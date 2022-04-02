@@ -44,4 +44,14 @@
     .form-container > input[type='submit'] {
         width: 80%;
     }
+    .button-container {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    .download-inv {
+        width: 70%;
+    }
+    .copy-link {
+        width: 30%;
+    }
 }
