@@ -25,7 +25,7 @@ a {
 .content {
     color: #f1f1f1;
     width: 100%;
-    padding-block: 3rem;
+    padding-block: 10vh;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -305,7 +305,7 @@ input[type='submit']:hover {
 
 .sosmed-container {
     width: 100%;
-    padding: 2em 1.2em 0.7em 0;
+    padding: 2em;
     display: flex;
     justify-content: flex-end;
     align-items: center;
