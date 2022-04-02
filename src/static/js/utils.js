@@ -34,7 +34,7 @@ function generatePopupCard(group1, group2) {
                 $('<h3>').text(group2.name),
             ]),
         ]),
-        $('<form>', { action: '', id: 'password-form' }).append([
+        $('<form>', { action: '', id: 'password-form', 'data-id': group2.id }).append([
             $('<div>', { class: 'form-container' }).append([
                 $('<label>', { for: 'key', class: 'material-icons-round' }).text('key'),
                 $('<input>', {
@@ -51,15 +51,15 @@ function generatePopupCard(group1, group2) {
     ]);
 }
 
-function generateVideoPage({ video, link = '', poster = '' }) {
+function generateVideoPage({ video, poster, link = '' }) {
     return [
         $('<div>', { class: 'back-btn' }).append(
             $('<span>', { class: 'material-icons-round' }).text('arrow_back_ios')
         ),
         $('<div>', { class: 'vid-con' }).append($('<video>', { class: 'invitation', src: video })),
         $('<div>', { class: 'button-container' }).append([
-            $('<p>', { class: 'download-inv' }).text('Download Invitation'),
-            $('<p>', { class: 'copy-link' }).text('Copy Link'),
+            $('<a>', { href: poster, class: 'download-inv' }).text('Download Invitation'),
+            $('<a>', { class: 'copy-link' }).text('Copy Link'),
         ]),
     ];
 }
