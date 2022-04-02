@@ -53,9 +53,7 @@ function generatePopupCard(group1, group2) {
 
 function generateVideoPage({ video, poster, link = '' }) {
     return [
-        $('<div>', { class: 'back-btn' }).append(
-            $('<span>', { class: 'material-icons-round' }).text('arrow_back_ios')
-        ),
+        $('<div>', { class: 'back-btn' }).append($('<span>', { class: 'material-icons-round' }).text('home')),
         $('<div>', { class: 'vid-con' }).append($('<video>', { class: 'invitation', src: video })),
         $('<div>', { class: 'button-container' }).append([
             $('<a>', { href: poster, class: 'download-inv' }).text('Download Invitation'),
