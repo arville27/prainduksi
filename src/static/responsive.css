@@ -100,6 +100,11 @@
 @media screen and (max-width: 500px) {
     .popup-card {
         font-size: 0.5rem;
+        gap: 2rem;
+        padding: 3.3rem 1.15rem 3rem;
+    }
+    .logo-container {
+        gap: 1.4rem;
     }
     .logo-container > .material-icons-round {
         font-size: 1.5rem;
@@ -115,7 +120,11 @@
         font-size: 0.5rem !important;
     }
     .form-container > input[type='submit'] {
+        width: 35%;
+    }
+    .form-container > input[type='password'] {
         width: 80%;
+        min-width: 0;
     }
     .button-container {
         flex-wrap: wrap;

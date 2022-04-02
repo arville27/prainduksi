@@ -288,6 +288,7 @@ a {
 .form-container > input[type='password']:focus {
     border: none;
     outline: none;
+    width: 55%;
 }
 
 input[type='submit'] {
@@ -297,6 +298,7 @@ input[type='submit'] {
     border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
+    width: 35%;
 }
 
 input[type='submit']:hover {
