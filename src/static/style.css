@@ -287,12 +287,12 @@ a {
 .form-container > input[type='password'] {
     border: none;
     background-color: none;
+    width: 55%;
 }
 
 .form-container > input[type='password']:focus {
     border: none;
     outline: none;
-    width: 55%;
 }
 
 input[type='submit'] {
