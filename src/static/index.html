@@ -8,17 +8,17 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
         <title>Call of The Sea</title>
         <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="responsive.css">
+        <link rel="stylesheet" href="responsive.css" />
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script type="module" src="js/index.js" defer></script>
     </head>
     <body>
+        <div class="bg">
+            <video class="bg-vid" autoplay loop muted>
+                <source src="/Assets/oceanBG.mp4" type="video/mp4" />
+            </video>
+        </div>
         <div class="content">
-            <div class="bg">
-                <video class="bg-vid" autoplay loop muted>
-                    <source src="/Assets/oceanBG.mp4" type="video/mp4" />
-                </video>
-            </div>
             <div class="c-1">
                 <div class="auspicious">
                     <img src="/Assets/auspicious.jpg" alt="" />
@@ -27,23 +27,23 @@
                 <div class="kelas-container"></div>
             </div>
             <div class="c-3"></div>
-            <div class="sosmed-container">
-                <p>Sosial Media :</p>
-                <a
-                    class="icon-container"
-                    href="https://instagram.com/pptibca10?utm_medium=copy_link"
-                    target="_blank"
-                >
-                    <img class="sosmed-icon" src="Assets/instagram.png" alt="" />
-                </a>
-                <a
-                    class="icon-container"
-                    href="https://www.youtube.com/channel/UC_1P5CQ8pB6-Vp1MqVHcALg"
-                    target="_blank"
-                >
-                    <img class="sosmed-icon" src="Assets/youtube.png" alt="" />
-                </a>
-            </div>
+        </div>
+        <div class="sosmed-container">
+            <p>Sosial Media :</p>
+            <a
+                class="icon-container"
+                href="https://instagram.com/pptibca10?utm_medium=copy_link"
+                target="_blank"
+            >
+                <img class="sosmed-icon" src="Assets/instagram.png" alt="" />
+            </a>
+            <a
+                class="icon-container"
+                href="https://www.youtube.com/channel/UC_1P5CQ8pB6-Vp1MqVHcALg"
+                target="_blank"
+            >
+                <img class="sosmed-icon" src="Assets/youtube.png" alt="" />
+            </a>
         </div>
         <div class="popup-container"></div>
     </body>

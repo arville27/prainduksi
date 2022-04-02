@@ -6,7 +6,7 @@ $('.kelas-container').append(data['classes'].map((data) => generateCardLogo(data
 // Password popup
 $('.logo-kelas').on('click', (e) => {
     const id = $(e.target).attr('data-id');
-    const content = $('.content');
+    const content = $('.content, .bg-vid');
     const container = $('.popup-container');
     const attended = data['classes'].find((item) => item.id === id);
     content.toggleClass('blur');
