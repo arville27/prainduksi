@@ -30,7 +30,7 @@ a {
 .content {
     color: #f1f1f1;
     width: 100%;
-    padding-block: 10vh;
+    padding-block: 5vh;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -166,7 +166,7 @@ a {
 
 .text-container p {
     font-size: 1vw;
-    width: 75%;
+    width: 65%;
 }
 
 .button-container {

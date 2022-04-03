@@ -1,145 +1,10 @@
 @media screen and (max-width: 950px) {
+    /* Home page responsive */
     .kelas {
         min-width: 135px;
     }
-}
 
-@media screen and (max-width: 840px) {
-    .auspicious > img {
-        width: 7%;
-    }
-    .content {
-        gap: 1.8rem;
-    }
-    .kelas {
-        min-width: 120px;
-    }
-    .kelas-container {
-        flex-wrap: wrap;
-        gap: 3vw;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .c-1 {
-        gap: 1.5rem;
-    }
-    .c-1 > h1 {
-        font-size: 1.6rem;
-    }
-    .kelas-container {
-        flex-wrap: wrap;
-        gap: 5vw;
-        padding: 10%;
-    }
-    .auspicious > img {
-        width: 10%;
-    }
-    .kelas {
-        width: 18vw;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .auspicious > img {
-        width: 10%;
-        min-width: 150px;
-        border-radius: 50%;
-        transition: 0.5s ease-in-out;
-    }
-    .c-1 {
-        gap: 1.5rem;
-        padding-bottom: 2rem;
-    }
-    .c-1 > h1 {
-        font-size: 1.4em;
-    }
-    .kelas-container {
-        gap: 3vw;
-        padding-inline: 3%;
-    }
-    .kelas {
-        width: 8vw;
-    }
-    .kelas p {
-        transform: scale(0.85);
-    }
-    .kelas:hover {
-        transform: scale(1.1);
-        margin-inline: 0.3rem;
-    }
-}
-
-/* Password pop up */
-@media screen and (max-width: 600px) {
-    .popup-card {
-        width: 80%;
-        font-size: 0.8rem;
-    }
-    .title-container {
-        width: 100%;
-        /* border: solid 1px black; */
-    }
-    .logo-container {
-        width: 100%;
-        /* border: solid 1px black; */
-    }
-    .image-container {
-        width: 90%;
-        /* border: solid 1px red; */
-    }
-    .image-container > img {
-        width: 100%;
-    }
-    .logo-container > .material-icons-round {
-        font-size: 2rem;
-        /* border: solid 1px blue; */
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .popup-card {
-        font-size: 0.5rem;
-        gap: 2rem;
-        padding: 3.3rem 1.15rem 3rem;
-    }
-    .logo-container {
-        gap: 1.4rem;
-    }
-    .logo-container > .material-icons-round {
-        font-size: 1.5rem;
-        /* border: solid 1px blue; */
-    }
-    form {
-        width: 80%;
-    }
-    .form-container {
-        width: 100%;
-    }
-    .form-container > input {
-        font-size: 0.5rem !important;
-    }
-    .form-container > input[type='submit'] {
-        width: 35%;
-    }
-    .form-container > input[type='password'] {
-        width: 80%;
-        min-width: 0;
-    }
-    .button-container {
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
-    .download-inv {
-        width: 70%;
-    }
-    .copy-link {
-        width: 30%;
-    }
-}
-
-/* video-page responsive */
-@media screen and (max-width: 950px) {
+    /* video-page responsive */
     .c-3 {
         flex-direction: column;
         justify-content: center;
@@ -181,7 +46,44 @@
     }
 }
 
+@media screen and (max-width: 840px) {
+    /* Home page responsive */
+    .auspicious > img {
+        width: 7%;
+    }
+    .content {
+        gap: 1.8rem;
+    }
+    .kelas {
+        min-width: 120px;
+    }
+    .kelas-container {
+        flex-wrap: wrap;
+        gap: 3vw;
+    }
+}
+
 @media screen and (max-width: 600px) {
+    /* Home page responsive */
+    .c-1 {
+        gap: 1.5rem;
+    }
+    .c-1 > h1 {
+        font-size: 1.6rem;
+    }
+    .kelas-container {
+        flex-wrap: wrap;
+        gap: 5vw;
+        padding: 10%;
+    }
+    .auspicious > img {
+        width: 10%;
+    }
+    .kelas {
+        width: 18vw;
+    }
+
+    /* video-page responsive */
     .c-3 video {
         width: 90%;
     }
@@ -200,7 +102,102 @@
     }
 }
 
+@media screen and (max-width: 600px) {
+    /* Password pop up responsive*/
+    .popup-card {
+        width: 80%;
+        font-size: 0.8rem;
+    }
+    .title-container {
+        width: 100%;
+    }
+    .logo-container {
+        width: 100%;
+    }
+    .image-container {
+        width: 90%;
+    }
+    .image-container > img {
+        width: 100%;
+    }
+    .logo-container > .material-icons-round {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    /* Password pop up responsive*/
+    .popup-card {
+        font-size: 0.5rem;
+        gap: 2rem;
+        padding: 3.3rem 1.15rem 3rem;
+    }
+    .logo-container {
+        gap: 1.4rem;
+    }
+    .logo-container > .material-icons-round {
+        font-size: 1.5rem;
+        /* border: solid 1px blue; */
+    }
+    form {
+        width: 80%;
+    }
+    .form-container {
+        width: 100%;
+    }
+    .form-container > input {
+        font-size: 0.5rem !important;
+    }
+    .form-container > input[type='submit'] {
+        width: 35%;
+    }
+    .form-container > input[type='password'] {
+        width: 80%;
+        min-width: 0;
+    }
+    .button-container {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    .download-inv {
+        width: 70%;
+    }
+    .copy-link {
+        width: 30%;
+    }
+}
+
 @media screen and (max-width: 480px) {
+    /* Home page responsive */
+    .auspicious > img {
+        width: 10%;
+        min-width: 150px;
+        border-radius: 50%;
+        transition: 0.5s ease-in-out;
+    }
+    .c-1 {
+        gap: 1.5rem;
+        padding-bottom: 2rem;
+    }
+    .c-1 > h1 {
+        font-size: 1.4em;
+    }
+    .kelas-container {
+        gap: 3vw;
+        padding-inline: 3%;
+    }
+    .kelas {
+        width: 8vw;
+    }
+    .kelas p {
+        transform: scale(0.85);
+    }
+    .kelas:hover {
+        transform: scale(1.1);
+        margin-inline: 0.3rem;
+    }
+
+    /* video-page responsive */
     .c-3 {
         padding: 1rem;
     }
@@ -216,15 +213,12 @@
     .download-inv {
         width: 30%;
     }
-    /* .sosmed-container > p {
-        font-size: 0.8rem;
-    } */
     .sosmed-container {
-        transform: scale(0.9);
+        transform: scale(0.8);
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 330px) {
     .sosmed-container > p,
     .popup-title > span {
         display: none;

@@ -58,7 +58,7 @@ function generateVideoPage({ video, poster }) {
             $('<div>', { class: 'text-container' }).append([
                 $('<h1>').text('Congratulations !'),
                 $('<p>').text(
-                    'You can download invitation and get the link through buttons below bla bla... gatau lagi wa mo tulis apa...'
+                    'You can download invitation and get the link through buttons below to fulfill The Call of The Sea'
                 ),
             ]),
             $('<div>', { class: 'button-container' }).append([
