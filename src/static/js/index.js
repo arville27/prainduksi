@@ -65,3 +65,41 @@ $(document).on('submit', '#password-form', async (e) => {
         $('#msg').html('Oops, wrong password!').css('color', 'red');
     }
 });
+
+// Blinking text
+const listWords = ['PPBP 1', 'PPBP 2', 'PPTI 11', 'PPTI 12', 'PPTI 13'];
+let idxArr = 0;
+let idx = 0;
+let currentWord = listWords[idxArr];
+
+function typeWriter() {
+    if (idx < currentWord.length) {
+        document.getElementById('typed-target').innerHTML += currentWord.charAt(idx++);
+        setTimeout(typeWriter, 100);
+    } else if (idx === currentWord.length && idxArr < listWords.length - 1) {
+        idxArr++;
+        setTimeout(() => {
+            typeDeleter(currentWord);
+            currentWord = listWords[idxArr];
+        }, 2000);
+    } else if (idxArr === listWords.length - 1) {
+        idxArr = 0;
+        setTimeout(() => {
+            typeDeleter(currentWord);
+            currentWord = listWords[idxArr];
+        }, 2000);
+    }
+}
+
+function typeDeleter(currentWord) {
+    if (idx > 0) {
+        idx--;
+        let kata = currentWord.slice(0, idx);
+        document.getElementById('typed-target').innerHTML = kata;
+        setTimeout(() => typeDeleter(currentWord), 200);
+    } else {
+        typeWriter();
+    }
+}
+
+typeWriter();

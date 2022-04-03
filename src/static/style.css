@@ -383,3 +383,46 @@ nav {
 .visible {
     visibility: visible;
 }
+
+.typed-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5ch;
+}
+
+.typed-child-container {
+    display: flex;
+}
+
+.typed-cursor {
+    color: gold;
+    animation: blink-animation 1s linear infinite;
+    -webkit-animation: blink-animation 1s linear infinite;
+}
+
+@keyframes blink-animation {
+    0% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes blink-animation {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
