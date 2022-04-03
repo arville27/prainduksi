@@ -1,9 +1,9 @@
 const express = require('express');
 const auth = express.Router();
-const { SECRET, participants } = require('../config');
+const { SECRET, ADMIN_SECRET, participants } = require('../config');
 
 auth.post('/', (req, res) => {
-    if (req.body?.secret === SECRET) {
+    if ([SECRET, ADMIN_SECRET].includes(req.body?.secret)) {
         const active = participants.find((group) => group.active === 1);
         req.session.access = active.id;
         res.sendStatus(200);
