@@ -1,7 +1,7 @@
 module.exports = {
     name: 'Spit user and group id',
     matcher: function (client, event) {
-        return event.message.text.match(/^x identifier/i) !== null;
+        return event.message.text.match(/^x id/i) !== null;
     },
     run: async (client, event) => {
         const messages = [];
