@@ -22,6 +22,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use('/api/event', require('./routes/event'));
 app.use('/api/auth', require('./routes/auth'));
+app.use('/health', require('./routes/health'));
 app.use('/Assets', require('./routes/assets'));
 app.use(express.static('src/static'));
 
