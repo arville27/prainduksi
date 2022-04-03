@@ -4,8 +4,8 @@ const { organizer, participants } = require('../config');
 const authorization = require('../middlerware/authorization');
 
 const participantsWithoutLink = participants.map((participant) => {
-    delete participant['link'];
-    return participant;
+    const { logo, video, poster, name, active } = participant;
+    return { logo, video, poster, name, active };
 });
 
 route.get('/members', (_, res) => res.json({ organizer, participants: participantsWithoutLink }));
@@ -21,7 +21,7 @@ route.get('/participant/:id', (req, res) => {
 });
 
 route.get('/active/link', authorization, (req, res) => {
-    if (!req.valid) return res.sendStatus(401);
+    if (!req.valid) return res.sendStatus(403);
     const active = participants.find((group) => group.active === 1);
     res.json({ link: active.link });
 });
