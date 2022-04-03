@@ -49,6 +49,8 @@ $(document).on('submit', '#password-form', async (e) => {
         $('.back-btn').addClass('visible');
         container.empty().fadeIn(250).css('display', 'flex').append(generateVideoPage(active));
 
+        const { link } = await (await fetch('/api/event/active/link')).json();
+
         // Back button from video page
         $('.back-btn').one('click', async () => {
             $('.back-btn').removeClass('visible');
@@ -58,7 +60,7 @@ $(document).on('submit', '#password-form', async (e) => {
         });
 
         // Clipboard copy from video page
-        $('#clip-copy').on('click', () => navigator.clipboard.writeText(active.link));
+        $('#clip-copy').on('click', () => navigator.clipboard.writeText(link));
 
         $('video.invitation')[0].play();
     } else {
