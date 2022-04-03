@@ -396,6 +396,10 @@ nav {
     display: flex;
 }
 
+#typed-target {
+    color: gold;
+}
+
 .typed-cursor {
     color: gold;
     animation: blink-animation 1s linear infinite;
