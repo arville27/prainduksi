@@ -56,7 +56,7 @@
     }
     .kelas-container {
         gap: 3vw;
-        padding-inline: 5%;
+        padding-inline: 3%;
     }
     .kelas {
         width: 8vw;
@@ -144,12 +144,15 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        top: 15%;
+        left: 0;
+        right: 0;
+        bottom: auto;
         padding: 2em;
-        margin-top: 15%;
         gap: 2rem;
     }
     .c-3 video {
-        width: 75%;
+        width: 80%;
     }
     .vid-content {
         align-items: center;
@@ -213,11 +216,20 @@
     .download-inv {
         width: 30%;
     }
+    /* .sosmed-container > p {
+        font-size: 0.8rem;
+    } */
+    .sosmed-container {
+        transform: scale(0.9);
+    }
 }
 
 @media screen and (max-width: 320px) {
     .sosmed-container > p,
     .popup-title > span {
         display: none;
+    }
+    .text-container > h1 {
+        font-size: 1.5rem;
     }
 }
