@@ -144,7 +144,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 5%;
+        padding: 2em;
         margin-top: 15%;
         gap: 2rem;
     }
@@ -162,10 +162,10 @@
         text-align: center;
         gap: 1rem;
     }
-    .text-container h1 {
+    .text-container > h1 {
         font-size: 2rem;
     }
-    .text-container p {
+    .text-container > p {
         font-size: 0.8rem;
     }
     .button-container {
@@ -179,14 +179,15 @@
 }
 
 @media screen and (max-width: 600px) {
-    .c-3 {
-        padding: 2rem;
-    }
     .c-3 video {
         width: 90%;
     }
     .vid-content {
         width: 85%;
+    }
+    .download-inv,
+    .copy-link {
+        font-size: 0.7rem;
     }
     .download-inv {
         max-width: 7.8rem;
@@ -200,7 +201,7 @@
     .c-3 {
         padding: 1rem;
     }
-    .text-container h1 {
+    .text-container > h1 {
         font-size: 1.8rem;
     }
     .download-inv,
@@ -211,5 +212,12 @@
 
     .download-inv {
         width: 30%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .sosmed-container > p,
+    .popup-title > span {
+        display: none;
     }
 }
