@@ -4,6 +4,7 @@ const { saveData } = require('../utility');
 
 module.exports = async (req, _, next) => {
     next();
+    data.states.trial += 1;
     if (req.body.secret === SECRET && !data.states.guessed) {
         data.states.guessed = true;
         const active = data.participants.find((group) => group.active === 1);
@@ -24,6 +25,6 @@ module.exports = async (req, _, next) => {
                 })
                 .catch(console.log);
         }
-    } else data.states.trial += 1;
+    }
     await saveData(data);
 };
