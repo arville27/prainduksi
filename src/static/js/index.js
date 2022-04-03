@@ -32,7 +32,6 @@ $('.logo-kelas').on('click', async () => {
 
 $(document).on('submit', '#password-form', async (e) => {
     e.preventDefault();
-
     const answer = document.getElementById('key').value.toUpperCase();
     const active = await (await fetch('/api/event/active')).json();
     const option = {
