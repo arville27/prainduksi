@@ -4,7 +4,7 @@ const { saveData } = require('../utility');
 
 module.exports = async (req, _, next) => {
     next();
-    if (req.body.secret === SECRET) {
+    if (req.body.secret === SECRET && !data.states.guessed) {
         data.states.guessed = true;
         const active = data.participants.find((group) => group.active === 1);
         if (GROUP_ID) {
@@ -15,9 +15,15 @@ module.exports = async (req, _, next) => {
                 })
                 .catch(console.log);
         }
-    } else if (req.body.secret !== ADMIN_SECRET) {
-        console.log('trial');
-        data.states.trial += 1;
-    }
+    } else if (req.body.secret === ADMIN_SECRET) {
+        if (GROUP_ID) {
+            client
+                .pushMessage(GROUP_ID, {
+                    type: 'text',
+                    text: `[TEST] Auth success ✅`,
+                })
+                .catch(console.log);
+        }
+    } else data.states.trial += 1;
     await saveData(data);
 };
