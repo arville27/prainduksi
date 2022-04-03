@@ -17,7 +17,7 @@ app.use(
         saveUninitialized: false,
     })
 );
-app.use('/webhook', require('./routes/webhook'));
+app.use('/line', require('./routes/line'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use('/api/event', require('./routes/event'));
