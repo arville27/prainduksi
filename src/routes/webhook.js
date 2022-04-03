@@ -4,15 +4,14 @@ const line = require('@line/bot-sdk');
 const { LINE_MESSAGING_API } = require('../config');
 
 route.post('/', line.middleware(LINE_MESSAGING_API), async (req, res) => {
-  try {
-    const result = await Promise.all(req.body.events.map(handleEvent));
-    res.json(result);
-  } catch (error) {
-      console.error(error);
-      res.sendStatus(500);
+    try {
+        const result = await Promise.all(req.body.events.map(handleEvent));
+        res.json(result);
+    } catch (error) {
+        console.error(error);
+        res.sendStatus(500);
     }
-  }
-);
+});
 
 const client = new line.Client(LINE_MESSAGING_API);
 function handleEvent(event) {
