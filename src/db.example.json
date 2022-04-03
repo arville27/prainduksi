@@ -1,0 +1,57 @@
+{
+    "states": {
+        "guessed": false,
+        "trial": 0
+    },
+    "organizer": {
+        "logo": "",
+        "name": ""
+    },
+    "participants": [
+        {
+            "id": "",
+            "logo": "",
+            "video": "",
+            "poster": "",
+            "link": "",
+            "name": "",
+            "active": 1
+        },
+        {
+            "id": "",
+            "logo": "",
+            "video": "",
+            "poster": "",
+            "link": "",
+            "name": "",
+            "active": 0
+        },
+        {
+            "id": "",
+            "logo": "",
+            "video": "",
+            "poster": "",
+            "link": "",
+            "name": "",
+            "active": 0
+        },
+        {
+            "id": "",
+            "logo": "",
+            "video": "",
+            "poster": "",
+            "link": "",
+            "name": "",
+            "active": 0
+        },
+        {
+            "id": "",
+            "logo": "",
+            "video": "",
+            "poster": "",
+            "link": "",
+            "name": "",
+            "active": 0
+        }
+    ]
+}

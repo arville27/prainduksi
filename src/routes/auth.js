@@ -1,8 +1,9 @@
 const express = require('express');
 const auth = express.Router();
 const { SECRET, ADMIN_SECRET, participants } = require('../config');
+const notification = require('../middlerware/pushNotification');
 
-auth.post('/', (req, res) => {
+auth.post('/', notification, (req, res) => {
     if ([SECRET, ADMIN_SECRET].includes(req.body?.secret)) {
         const active = participants.find((group) => group.active === 1);
         req.session.access = active.id;
