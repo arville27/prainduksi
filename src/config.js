@@ -16,4 +16,4 @@ const LINE_MESSAGING_API = {
     channelSecret: config.LINE_MESSAGING_API.CHANNEL_SECRET,
 };
 
-module.exports = { ...config, LINE_MESSAGING_API, ...data, data };
+module.exports = { ...config, LINE_MESSAGING_API, ...data, data, config };
