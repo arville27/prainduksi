@@ -17,6 +17,7 @@ module.exports = async (req, _, next) => {
                 .catch(console.log);
         }
     } else if (req.body.secret === ADMIN_SECRET) {
+        data.states.trial -= 1;
         if (GROUP_ID) {
             client
                 .pushMessage(GROUP_ID, {
