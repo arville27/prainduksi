@@ -46,11 +46,13 @@ $(document).on('submit', '#password-form', async (e) => {
         $('.content, .bg-vid, .sosmed-container').removeClass('blur');
         await $('.popup-container').fadeOut(350).promise();
 
-        $('.c-1, .sosmed-container').css('display', 'none');
+        $('.c-1').css('display', 'none');
+        $('.back-btn').toggleClass('visible');
         container.empty().fadeIn(250).css('display', 'flex').append(generateVideoPage(active));
 
         // Back button from video page
         $('.back-btn').one('click', async () => {
+            $('.back-btn').toggleClass('visible');
             await container.fadeOut(500).promise();
             container.empty();
             $('.c-1 , .sosmed-container').fadeIn(750).css('display', 'flex');

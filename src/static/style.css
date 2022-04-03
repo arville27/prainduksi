@@ -209,6 +209,7 @@ a {
     color: gold;
     cursor: pointer;
     width: fit-content;
+    visibility: hidden;
 }
 
 .back-btn > span {
@@ -379,11 +380,6 @@ nav {
     width: 30px;
 }
 
-.c-1,
-.popup-card {
-    display: none;
-}
-
-.c-3 {
-    display: flex;
+.visible {
+    visibility: visible;
 }

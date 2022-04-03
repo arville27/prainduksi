@@ -53,11 +53,18 @@ function generatePopupCard(group1, group2) {
 
 function generateVideoPage({ video, poster }) {
     return [
-        $('<div>', { class: 'back-btn' }).append($('<span>', { class: 'material-icons-round' }).text('home')),
-        $('<div>', { class: 'vid-con' }).append($('<video>', { class: 'invitation', src: video })),
-        $('<div>', { class: 'button-container' }).append([
-            $('<a>', { href: poster, class: 'download-inv' }).text('Download Invitation'),
-            $('<a>', { id: 'clip-copy', class: 'copy-link' }).text('Copy Link'),
+        $('<video>', { class: 'invitation', src: video }),
+        $('<div>', { class: 'vid-content' }).append([
+            $('<div>', { class: 'text-container' }).append([
+                $('<h1>').text('Congratulations !'),
+                $('<p>').text(
+                    'You can download invitation and get the link through buttons below bla bla... gatau lagi wa mo tulis apa...'
+                ),
+            ]),
+            $('<div>', { class: 'button-container' }).append([
+                $('<a>', { href: poster, class: 'download-inv' }).text('Download Invitation'),
+                $('<a>', { id: 'clip-copy', class: 'copy-link' }).text('Copy Link'),
+            ]),
         ]),
     ];
 }
