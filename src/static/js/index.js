@@ -65,11 +65,16 @@ $(document).on('submit', '#password-form', async (e) => {
         });
 
         // Clipboard copy from video page
-        $('#clip-copy').on('click', () => {
-            $('#clip-copy').css('background-color', 'rgba(255,255,255,0.2)').html('Link copied');
-            setTimeout(() => {
-                $('#clip-copy').css('background-color', 'rgba(255,255,255,0)').html('Copy Link');
-            }, 3000);
+        let clipTimeout = null;
+        const clipButton = $('#clip-copy');
+        clipButton.on('click', () => {
+            clipButton.css('background-color', 'rgba(255,255,255,0.2)').text('Link copied');
+            if (!clipTimeout) {
+                clipTimeout = setTimeout(() => {
+                    clipButton.css('background-color', 'rgba(255,255,255,0)').text('Copy Link');
+                    clipTimeout = null;
+                }, 3000);
+            }
             navigator.clipboard.writeText(link);
         });
 
