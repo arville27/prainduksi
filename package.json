@@ -1,30 +1,30 @@
 {
-  "name": "prainduksi-site",
-  "version": "0.1.0",
-  "description": "Website for Prainduksi PPTI10",
-  "main": "src/app.js",
-  "scripts": {
-    "test": "nodemon src/app.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/michellepaulinn/prainduksi.git"
-  },
-  "keywords": [],
-  "author": "Michelle, Arville, Yohanes, Michael",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/michellepaulinn/prainduksi/issues"
-  },
-  "homepage": "https://github.com/michellepaulinn/prainduksi#readme",
-  "devDependencies": {
-    "@types/jquery": "^3.5.14",
-    "nodemon": "^2.0.15"
-  },
-  "dependencies": {
-    "@line/bot-sdk": "^7.4.0",
-    "express": "^4.17.3",
-    "express-session": "^1.17.2",
-    "glob": "^7.2.0"
-  }
+    "name": "prainduksi-site",
+    "version": "0.1.0",
+    "description": "Website for Prainduksi PPTI10",
+    "main": "src/app.js",
+    "scripts": {
+        "test": "nodemon src/app.js --ignore 'src/db.json'"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/michellepaulinn/prainduksi.git"
+    },
+    "keywords": [],
+    "author": "Michelle, Arville, Yohanes, Michael",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/michellepaulinn/prainduksi/issues"
+    },
+    "homepage": "https://github.com/michellepaulinn/prainduksi#readme",
+    "devDependencies": {
+        "@types/jquery": "^3.5.14",
+        "nodemon": "^2.0.15"
+    },
+    "dependencies": {
+        "@line/bot-sdk": "^7.4.0",
+        "express": "^4.17.3",
+        "express-session": "^1.17.2",
+        "glob": "^7.2.0"
+    }
 }
