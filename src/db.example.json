@@ -1,7 +1,9 @@
 {
     "states": {
         "guessed": false,
-        "trial": 0
+        "trial": 0,
+        "admin_notification": true,
+        "notification": true
     },
     "organizer": {
         "logo": "",
