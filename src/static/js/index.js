@@ -1,5 +1,8 @@
 import { generateCardLogo, data, generatePopupCard, generateVideoPage } from './utils.js';
 
+// Preloader
+$(window).on('load', () => $('#preloader').fadeOut(750));
+
 // Generate card kelas
 $('.kelas-container').append(data.participants.map((group) => generateCardLogo(group)));
 

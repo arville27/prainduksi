@@ -431,3 +431,14 @@ nav {
         opacity: 1;
     }
 }
+
+#preloader {
+    background-image: url('Assets/load.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20%;
+    background-color: black;
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+}
