@@ -12,7 +12,9 @@ $('.kelas-container').append(data.participants.map((group) => generateCardLogo(g
 $('.logo-kelas').on('click', async () => {
     const content = $('.content, .bg-vid, .sosmed-container');
     const container = $('.popup-container');
-    const active = await (await fetch('/api/event/active')).json();
+    const resp = await fetch('/api/event/active');
+    if (resp.status !== 200) return;
+    const active = await resp.json();
     content.toggleClass('blur');
     container.empty().fadeIn(400).css('display', 'flex').append(generatePopupCard(data.organizer, active));
     $('#close-popup').one('click', () => {
@@ -38,7 +40,9 @@ $('.logo-kelas').on('click', async () => {
 $(document).on('submit', '#password-form', async (e) => {
     e.preventDefault();
     const answer = document.getElementById('key').value.toUpperCase();
-    const active = await (await fetch('/api/event/active')).json();
+    const resp = await fetch('/api/event/active');
+    if (resp.status !== 200) return;
+    const active = await resp.json();
     const option = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -54,7 +58,9 @@ $(document).on('submit', '#password-form', async (e) => {
         $('.back-btn').addClass('visible');
         container.empty().fadeIn(250).css('display', 'flex').append(generateVideoPage(active));
 
-        const { link } = await (await fetch('/api/event/active/link')).json();
+        const resp = await fetch('/api/event/active/link');
+        if (resp.status !== 200) return;
+        const { link } = await resp.json();
 
         // Back button from video page
         $('.back-btn').one('click', async () => {

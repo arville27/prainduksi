@@ -28,6 +28,7 @@ route.get('/active/link', authorization, (req, res) => {
 
 route.get('/active', (_, res) => {
     const active = participantsWithoutLink.find((group) => group.active === 1);
+    if (!active) return res.sendStatus(404);
     res.json(active);
 });
 
